@@ -1,8 +1,16 @@
-import React from 'react'
-import psp from '../assets/images/psp.png'
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import psp from '../assets/images/psp.png';
+
+
 
 
 function ReadMore() {
+    const { id } = useParams(); 
+
+  
+  console.log("Blog ID:", id);
+
     return (
         <div>
             <div className='flex justify-around  flex-col gap-3 w-2/4 ml-24 mt-5'>

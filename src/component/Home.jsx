@@ -10,7 +10,7 @@ import Footer from './Footer';
 function Home() {
     return (
         <>
-            <div className="lg:gap-4 bg-cover bg-right lg:bg-center h-[500px] flex justify-center gap-[30px] flex-col" style={{ backgroundImage: `url(${img1})` }}>
+            <div className="lg:gap-4 bg-cover bg-right lg:bg-center h-[500px] flex justify-center gap-[30px] flex-col " style={{ backgroundImage: `url(${img1})` }}>
                 <div className='lg:ml-14 lg:justify-start lg:flex container'>
                     <h1 className='lg:text-8xl font-medium text-center'>Stay Curious .</h1>
                 </div>

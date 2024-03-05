@@ -1,20 +1,6 @@
 import React, { useState } from 'react';
-import logo from '../assets/images/logo.png'
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Sign from '../component/Sign';
-import Stories from '../component/Stories'
-import Contact from '../component/Contact'
-import Home from '../component/Home';
-import Signup from './Signup';
-import MyFeed from './MyFeed';
-import ReadMore from './ReadMore';
-import MyStories from './MyStories';
-import CreateStoryForm from './CreateStoryForm';
-import UpdateStoryForm from './UpdateStoryForm';
-
-
-
-
+import logo from '../assets/images/logo.png';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -24,18 +10,16 @@ const Navbar = () => {
   };
 
   return (
-    <Router>
-      <header className="bg-white ">
+      <header className="bg-white">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
           <div className="flex items-center justify-between h-16">
             <a href="/" className="inline-flex items-center px-3 py-2 text-white font-bold text-xl">
               <img src={logo} alt="" />
             </a>
-
-
           </div>
 
           <div className="hidden sm:block space-x-4">
+            
             <Link to='/'></Link>
             <Link to='/mystories'></Link>
             <Link to='/readmore'></Link>
@@ -52,17 +36,13 @@ const Navbar = () => {
             <Link to='/sign' className="text-gray-700 hover:text-gray-500 px-3 py-2 rounded-md text-xl font-medium no-underline">
               Sign In
             </Link>
-            <Link to='signup'>
+            <Link to='/signup'>
               <button className='bg-blue-400 font-medium text-white px-3 py-1.5 rounded hover:bg-blue-300'>Get Started</button>
             </Link>
-
           </div>
+
           <div className="sm:hidden">
-            <button
-              onClick={handleNavClick}
-              type="button"
-              className=" inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-            >
+            <button onClick={handleNavClick} type="button" className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
               <span className="sr-only">Toggle menu</span>
               {openNav ? (
                 <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -78,39 +58,15 @@ const Navbar = () => {
 
           {openNav && (
             <div className="fixed inset-y-5 left-0 w-56 bg-white py-4 pl-6 h-96 sm:hidden">
-              <Link to='/stories' className="block py-2 pr-4 pl-3 text-gray-700 font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                Stories
-              </Link>
-              <a href="/contact" className="block py-2 pr-4 pl-3 text-gray-700 font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                Contact
-              </a>
-              <Link to='/signup' className="block py-2 pr-4 pl-3 text-gray-700 font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                Sign In
-              </Link>
-              <button className='bg-blue-400 font-medium text-white px-3 py-1.5 rounded'>Get Started</button>
+              <Link to='/stories' className="block py-2 pr-4 pl-3 text-gray-700 font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">Stories</Link>
+              <Link to='/contact' className="block py-2 pr-4 pl-3 text-gray-700 font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">Contact</Link>
+              <Link to='/signup' className="block py-2 pr-4 pl-3 text-gray-700 font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">Sign In</Link>
+              <Link to='/signup'><button className='bg-blue-400 font-medium text-white px-3 py-1.5 rounded'>Get Started</button></Link>
             </div>
           )}
         </nav>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/stories' element={<Stories />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/sign' element={<Sign />} />
-          <Route path='/signup' element={<Signup />} />
-          <Route path='/myfeed' element={<MyFeed />} />
-          <Route path='/readmore' element={<ReadMore />} />
-          <Route path='/mystories' element={<MyStories />} />
-          <Route path='/create' element={<CreateStoryForm />} />
-          <Route path='/update' element={<UpdateStoryForm />} />
-        </Routes>
       </header>
-    </Router>
   );
 };
 
 export default Navbar;
-
-
-
-
-
