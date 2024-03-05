@@ -51,7 +51,12 @@ function MyFeed() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
           {blog.map((blogs) => {
-            const { _id, title, description, tags, image } = blogs;
+            const { _id, title, description, tags, image, updatedAt } = blogs;
+
+            const formatDate = (date) => {
+              const option = {year: "numeric", month: "long", day: "numeric"}
+              return new Date(date).toLocaleDateString(option);
+            }
 
             return (
               <div className="  rounded-md overflow-hidden" key={_id}>
@@ -75,7 +80,7 @@ function MyFeed() {
                       <p className="mt-3">
                         By<span className="font-medium"> Chizu Praise </span>-
                       </p>
-                      <p className="mt-3">{ }</p>
+                      <p className="mt-3">{formatDate(updatedAt)}</p>
                     </span>
                     <p className="text-gray-700 mb-4">{description}</p>
                     <span className="flex items-center text-blue-500 gap-3">
