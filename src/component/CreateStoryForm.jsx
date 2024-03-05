@@ -5,7 +5,7 @@ function CreateStoryForm() {
   return (
     <>
       <div className="flex flex-col items-start justify-center min-h-screen bg-white p-4">
-        <h1 className="text-5xl font-bold font-serif">Create Story</h1>
+        <h1 className="text-4xl font-bold font-serif">Create Story</h1>
         <input
           type="text"
           placeholder="Title"
@@ -15,6 +15,12 @@ function CreateStoryForm() {
           type="text"
           placeholder="Tags"
           className="w-full md:w-96  lg:w-11/12 h-12 px-4 my-4 border border-gray-500"
+        />
+        
+         <input
+          type="file"
+          placeholder="Tags"
+          className="w-full md:w-96  lg:w-64  px-4 "
         />
         <textarea
           placeholder="Write your story..."

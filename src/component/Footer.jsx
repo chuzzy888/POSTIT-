@@ -7,8 +7,8 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 function Footer() {
     return (
-        <div className='bg-current'>
-            <div className='flex lg:justify-around lg:items-center lg:flex-row justify-around px-4 flex-col'>
+        <div className='bg-current '>
+            <div className='flex lg:justify-around gap-8 lg:items-center lg:flex-row justify-around container px-4 flex-col '>
                 <div className='text-white lg:mt-5 lg:mb-5 mb-3 mt-5'>
                     <p className='text-white font-medium text-lg'>About Post<span className='text-blue-500'>it</span>.</p>
                     <p className='text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br></br> Tincidunt id sem vel quis in turpis sit eget pellentesque.<br></br> Nunc etiicies in rhoncus, rhoncus in arcu.<br></br> Tincidunt neque fusce vitaenisi aliquet.<br></br> que maeae tortoere necsem commodo ac.</p>
@@ -29,7 +29,7 @@ function Footer() {
                     <p>Subscribe to our newsletter</p>
                     <div class="flex items-center lg:justify-end">
                         <div class="relative mr-2 mb-5">
-                            <input type="text" class="h-10 lg:w-96 w-80 border border-gray-300 rounded-l-lg px-4 py-2 bg-gray-50" placeholder="Email address..." />
+                            <input type="text" class="h-10 lg:w-96 w-64 text-xs border border-gray-300 rounded-l-lg px-4 py-2 bg-gray-50" placeholder="Email address..." />
                             <button class="mr-3 mb-1 mt-1 absolute inset-y-0 right-0 bg-blue-400 hover:bg-blue-700 text-white text-sm px-3 flex items-center">
                                 Subscribe
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block ml-1" viewBox="0 0 20 20" fill="currentColor">
