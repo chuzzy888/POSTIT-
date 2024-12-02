@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import story from "../assets/images/story.png";
 import Layout from "../components/Layout";
 export default function Stories() {
@@ -18,12 +19,16 @@ export default function Stories() {
               orci, platea aliquam id ut.
             </p>
             <div className="flex justify-center md:justify-start gap-4">
-              <button className="bg-[#0086B0] text-white px-4 py-1 font-lato  transition-all duration-300">
-                My Stories
-              </button>
-              <button className="border-2 border-[#0086B0] text-[#0086B0] px-4 py-1 font-lato transition-all duration-300">
-                Go to Feed
-              </button>
+              <Link to={"/Mystories"}>
+                <button className="bg-[#0086B0] text-[#F0F8FF] px-4 py-1 font-lato font-[700]  transition-all duration-300 rounded">
+                  My Stories
+                </button>
+              </Link>
+              <Link to={"/feeds"}>
+                <button className="border border-[#0086B0] text-[#0086B0] font-[700] px-4 py-1 font-lato transition-all duration-300 rounded">
+                  Go to Feed
+                </button>
+              </Link>
             </div>
           </div>
 

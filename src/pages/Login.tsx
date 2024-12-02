@@ -1,5 +1,6 @@
 import { HiX } from "react-icons/hi";
 import { Link } from "react-router-dom";
+import logo from "../assets/images/logo.png";
 
 export default function Login() {
   return (
@@ -7,6 +8,9 @@ export default function Login() {
       <div className=" flex items-center justify-center  bg-[#F0F0F0F0]">
         {/* Modal Container */}
         <div className="bg-white p-8 md:px-20 rounded-lg shadow-lg md:w-[90%] w-full max-w-xl relative h-screen flex justify-center items-center flex-col">
+          <Link to={"/"}>
+            <img src={logo} alt="Postit Logo" className="h-6 mb-10" />
+          </Link>
           {/* Close Button */}
           <Link to={"/"}>
             <button className="absolute top-4 right-4 text-gray-500 hover:text-gray-700">

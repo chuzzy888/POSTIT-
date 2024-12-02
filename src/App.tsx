@@ -11,6 +11,11 @@ import {
   useLocation,
 } from "react-router-dom";
 import Stories from "./pages/Stories";
+import BlogList from "./components/BlogList";
+import BlogDetails from "./components/BlogDetails";
+import MyStories from "./components/MyStories";
+import EditStory from "./pages/EditStory";
+import CreateStory from "./pages/CreateStory";
 
 function App() {
   return (
@@ -37,8 +42,12 @@ function MainContent() {
         <Route path="/" element={<Home />} />
         <Route path="/join" element={<SignUp />} />
         <Route path="/stories" element={<Stories />} />
+        <Route path="/feeds" element={<BlogList />} />
+        <Route path="/blogdetails" element={<BlogDetails />} />
+        <Route path="/Mystories" element={<MyStories />} />
+        <Route path="/edit" element={<EditStory />} />
+        <Route path="/create" element={<CreateStory />} />
         <Route path="/login" element={<Login />} />
-        {/* Add other routes here */}
       </Routes>
 
       {!hideLayout && <Footer />}

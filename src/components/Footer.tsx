@@ -83,7 +83,7 @@ const Footer = () => {
               />
               <button
                 type="submit"
-                className="bg-[#0086B0] px-4 py-2 rounded text-white hover:bg-blue-600 font-lato w-full flex justify-center gap-3 items-center"
+                className="bg-[#0086B0] px-4 py-2 rounded text-white hover:bg-blue-600 font-lato w-full flex justify-center gap-2 items-center"
               >
                 Subscribe
                 <IoMdArrowForward className="text-lg" />

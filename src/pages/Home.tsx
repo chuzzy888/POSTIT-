@@ -23,7 +23,7 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative z-10 container mx-auto px-6 md:px-20 text-center sm:text-left">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-[#000000] font-[Harmattan] mb-8 leading-tight">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-[#000000] font-josefin mb-8 leading-tight">
             Stay Curious.
           </h1>
           <p className="mt-4 text-base md:text-lg text-gray-600 text-[#000000] font-medium leading-relaxed max-w-md mx-auto sm:mx-0 font-josefin">
@@ -32,7 +32,7 @@ export default function Home() {
             aliquam id ut.
           </p>
           <button className="mt-6 px-6 py-2 font-lato bg-[#0086B0] text-[#FFFBFB] rounded-lg  transition-all duration-300">
-            Get Started
+            Join Postit
           </button>
         </div>
       </div>

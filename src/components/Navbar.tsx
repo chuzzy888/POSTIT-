@@ -12,7 +12,7 @@ export default function Navbar() {
       {/* Logo */}
       <div>
         <Link to={"/"}>
-          <img src={logo} alt="Postit Logo" className="h-5 md:h-6 " />
+          <img src={logo} alt="Postit Logo" className="h-6 " />
         </Link>
       </div>
 
@@ -47,14 +47,14 @@ export default function Navbar() {
           {isOpen ? (
             <RiCloseLargeFill className="text-2xl text-red-700" />
           ) : (
-            <HiOutlineMenuAlt3 className="text-2xl text-[#0086B0] " />
+            <HiOutlineMenuAlt3 className="text-4xl text-[#0086B0] " />
           )}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-16 left-0 w-full h-screen bg-white backdrop-blur-md bg-opacity-95 shadow-lg p-6 flex justify-center  flex-col items-center gap-10 md:hidden">
+        <div className="absolute top-16 left-0 w-full h-screen bg-white backdrop-blur-md bg-opacity-100 shadow-lg p-6 flex justify-center  flex-col items-center gap-10 md:hidden">
           <Link to={"/stories"}>
             <p
               className="text-[#292929] cursor-pointer hover:text-[#0086B0] text-xl"
